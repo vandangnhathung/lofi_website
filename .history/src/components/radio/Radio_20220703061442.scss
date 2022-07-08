@@ -1,0 +1,13 @@
+$primary: #f3a952;
+.slider {
+  color: $primary !important;
+}
+
+.MuiSlider {
+  &-root {
+    height: 10px;
+  }
+  &-thumb {
+    color: white;
+  }
+}
