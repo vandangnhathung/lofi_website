@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.2e84ce49.css",
-    "main.js": "./static/js/main.012d2626.js",
-    "static/js/787.4d161270.chunk.js": "./static/js/787.4d161270.chunk.js",
-    "index.html": "./index.html",
-    "main.2e84ce49.css.map": "./static/css/main.2e84ce49.css.map",
-    "main.012d2626.js.map": "./static/js/main.012d2626.js.map",
-    "787.4d161270.chunk.js.map": "./static/js/787.4d161270.chunk.js.map"
+    "main.css": "/lofi_website/static/css/main.2e84ce49.css",
+    "main.js": "/lofi_website/static/js/main.742d65d9.js",
+    "static/js/787.4d161270.chunk.js": "/lofi_website/static/js/787.4d161270.chunk.js",
+    "index.html": "/lofi_website/index.html",
+    "main.2e84ce49.css.map": "/lofi_website/static/css/main.2e84ce49.css.map",
+    "main.742d65d9.js.map": "/lofi_website/static/js/main.742d65d9.js.map",
+    "787.4d161270.chunk.js.map": "/lofi_website/static/js/787.4d161270.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e84ce49.css",
-    "static/js/main.012d2626.js"
+    "static/js/main.742d65d9.js"
   ]
 }
