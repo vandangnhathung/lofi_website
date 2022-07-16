@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lofi_website/static/css/main.2e84ce49.css",
-    "main.js": "/lofi_website/static/js/main.742d65d9.js",
+    "main.css": "/lofi_website/static/css/main.8fe4f55b.css",
+    "main.js": "/lofi_website/static/js/main.110f1ed7.js",
     "static/js/787.4d161270.chunk.js": "/lofi_website/static/js/787.4d161270.chunk.js",
     "index.html": "/lofi_website/index.html",
-    "main.2e84ce49.css.map": "/lofi_website/static/css/main.2e84ce49.css.map",
-    "main.742d65d9.js.map": "/lofi_website/static/js/main.742d65d9.js.map",
+    "main.8fe4f55b.css.map": "/lofi_website/static/css/main.8fe4f55b.css.map",
+    "main.110f1ed7.js.map": "/lofi_website/static/js/main.110f1ed7.js.map",
     "787.4d161270.chunk.js.map": "/lofi_website/static/js/787.4d161270.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e84ce49.css",
-    "static/js/main.742d65d9.js"
+    "static/css/main.8fe4f55b.css",
+    "static/js/main.110f1ed7.js"
   ]
 }
