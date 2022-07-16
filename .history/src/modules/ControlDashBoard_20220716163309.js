@@ -160,7 +160,7 @@ const ControlDashBoard = ({ openControlAdjust, controlBoardWidth }) => {
   );
   useEffect(() => {
     if (volumeCityRainNum > 0) {
-      dispatch(toggleSlice.actions.rainDayDashBoardToggleHome(true));
+      dispatch(toggleSlice.actions.rainDayDashBoardToggleHome(false));
     } else if (volumeCityRainNum === 0) {
       dispatch(toggleSlice.actions.rainDayDashBoardToggleHome(false));
       dispatch(toggleSlice.actions.rainDayToggleHome(false));
@@ -185,7 +185,7 @@ const ControlDashBoard = ({ openControlAdjust, controlBoardWidth }) => {
   useEffect(() => {
     if (volumeKeyboardNum > 0) {
       dispatch(toggleSlice.actions.keyboardDashBoardToggleHome(true));
-    } else if (volumeKeyboardNum === 0) {
+    } else if (volumeCityTrafficNum === 0) {
       dispatch(toggleSlice.actions.keyboardDashBoardToggleHome(false));
       dispatch(toggleSlice.actions.keyboardToggleHome(false));
     }

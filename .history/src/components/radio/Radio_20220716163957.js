@@ -36,7 +36,7 @@ const Radio = ({
     (state) => state.toggle.keyboardDashBoard
   );
   const oceanDashBoard = useSelector(
-    (state) => state.toggle.oceanDashboardToggle
+    (state) => state.toggle.oceanDashBoardToggle
   );
   const volumeCityTrafficNum = useSelector(
     (state) => state.volume.volumeCityTraffic
@@ -61,6 +61,7 @@ const Radio = ({
   const handleChangeOcean = (e) => {
     handleChangeVolumeOcean(e.target.value);
   };
+  console.log(dayRain, "dayRain");
   const { handleChangeVolume } = useHandleVolumeSound(
     dayRain,
     volumeRainNum,
@@ -90,11 +91,6 @@ const Radio = ({
   const handleChangeKeyboard = (e) => {
     handleChangeVolumeKeyboard(e.target.value);
   };
-  console.log(
-    "🚀 ~ file: Radio.js ~ line 140 ~ oceanDashBoard",
-    oceanDashBoard
-  );
-
   return (
     <label className="absolute cursor-pointer w-[200px] h-[72px] group flex justify-center">
       <input type="radio" className="hidden-input" checked={dayRain} />

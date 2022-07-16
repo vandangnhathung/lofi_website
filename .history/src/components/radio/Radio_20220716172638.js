@@ -36,7 +36,7 @@ const Radio = ({
     (state) => state.toggle.keyboardDashBoard
   );
   const oceanDashBoard = useSelector(
-    (state) => state.toggle.oceanDashboardToggle
+    (state) => state.toggle.oceanDashBoardToggle
   );
   const volumeCityTrafficNum = useSelector(
     (state) => state.volume.volumeCityTraffic

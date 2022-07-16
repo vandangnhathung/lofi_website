@@ -11,6 +11,7 @@ export default function useHandleVolumeSound(
   const dispatch = useDispatch();
   useEffect(() => {
     if (sound === true) {
+      console.log("3333");
       dispatch(adjust(50));
     }
   }, [sound]);

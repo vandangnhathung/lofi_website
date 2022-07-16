@@ -154,10 +154,6 @@ const ControlDashBoard = ({ openControlAdjust, controlBoardWidth }) => {
   const dayRainDashboard = useSelector(
     (state) => state.toggle.rainDayDashBoardToggle
   );
-  console.log(
-    "🚀 ~ file: ControlDashBoard.js ~ line 159 ~ useEffect ~ volumeCityRainNum",
-    volumeCityRainNum
-  );
   useEffect(() => {
     if (volumeCityRainNum > 0) {
       dispatch(toggleSlice.actions.rainDayDashBoardToggleHome(true));
@@ -185,7 +181,7 @@ const ControlDashBoard = ({ openControlAdjust, controlBoardWidth }) => {
   useEffect(() => {
     if (volumeKeyboardNum > 0) {
       dispatch(toggleSlice.actions.keyboardDashBoardToggleHome(true));
-    } else if (volumeKeyboardNum === 0) {
+    } else if (volumeCityTrafficNum === 0) {
       dispatch(toggleSlice.actions.keyboardDashBoardToggleHome(false));
       dispatch(toggleSlice.actions.keyboardToggleHome(false));
     }

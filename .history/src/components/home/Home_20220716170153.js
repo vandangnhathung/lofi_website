@@ -52,7 +52,7 @@ const Home = () => {
     (state) => state.toggle.summerStormDashboardToggle
   );
   const oceanDashBoard = useSelector(
-    (state) => state.toggle.oceanDashboardToggle
+    (state) => state.toggle.oceanDashBoardToggle
   );
   const enterStore = useSelector((state) => state.toggle.enterStoreToggle);
   //volume
@@ -132,7 +132,6 @@ const Home = () => {
       dispatch(toggleSlice.actions.rainDayToggleHome(true));
     }
     if (dayRain === true) {
-      dispatch(volumeSlice.actions.volumeRainAdjust(0));
       dispatch(toggleSlice.actions.rainDayToggleHome(false));
     }
     if (dayRainDashboard) {
@@ -150,7 +149,6 @@ const Home = () => {
       dispatch(toggleSlice.actions.summerStormToggleHome(!summerStormSound));
     }
     if (summerStormSound === true) {
-      dispatch(volumeSlice.actions.volumeSummerStormAdjust(0));
       dispatch(toggleSlice.actions.summerStormToggleHome(!summerStormSound));
     }
     if (summerStormDashboard) {
@@ -174,7 +172,6 @@ const Home = () => {
       dispatch(toggleSlice.actions.cityTrafficToggleHome(true));
     }
     if (cityTrafficSound === true) {
-      dispatch(volumeSlice.actions.volumeCityTrafficAdjust(0));
       dispatch(toggleSlice.actions.cityTrafficToggleHome(false));
     }
   };
@@ -192,7 +189,6 @@ const Home = () => {
       dispatch(volumeSlice.actions.volumeKeyboardAdjust(0));
     }
     if (keyboardSound === true) {
-      dispatch(volumeSlice.actions.volumeKeyboardAdjust(0));
       dispatch(toggleSlice.actions.keyboardToggleHome(!keyboardSound));
     }
   };
@@ -202,11 +198,10 @@ const Home = () => {
       dispatch(toggleSlice.actions.oceanToggleHome(!oceanSound));
     }
     if (oceanSound === false && !oceanDashBoard) {
-      dispatch(toggleSlice.actions.oceanToggleHome(!oceanSound));
+      dispatch(toggleSlice.actions.oceanToggleHome(true));
     }
     if (oceanSound === true) {
-      dispatch(volumeSlice.actions.volumeOceanAdjust(0));
-      dispatch(toggleSlice.actions.oceanToggleHome(!oceanSound));
+      dispatch(toggleSlice.actions.oceanToggleHome(false));
     }
     if (oceanDashBoard) {
       dispatch(toggleSlice.actions.oceanDashboardToggleHome(false));
@@ -221,7 +216,7 @@ const Home = () => {
     <>
       <div className="absolute inset-0 bg-[#24242f]  flex items-center justify-center">
         <img
-          src="./assets/icons/logo.0cbf9e63b4a021661126.gif"
+          src="/assets/icons/logo.0cbf9e63b4a021661126.gif"
           className="h-[100px] w-[200px]"
           alt=""
         />
@@ -243,7 +238,7 @@ const Home = () => {
                 } absolute transition-opacity duration-1000`}
               >
                 <source
-                  src="./assets/videos/Exterior+-+Day.mp4"
+                  src="/assets/videos/Exterior+-+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -265,7 +260,7 @@ const Home = () => {
                 } absolute transition-opacity duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/honoluluBalconyDay.mp4"
+                  src="/assets/images/thumbnails/honolulu/honoluluBalconyDay.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -287,7 +282,7 @@ const Home = () => {
                 } absolute transition-opacity duration-1000`}
               >
                 <source
-                  src="./assets/videos/Exterior+-+Night.mp4"
+                  src="/assets/videos/Exterior+-+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -308,7 +303,7 @@ const Home = () => {
                 } absolute transition-opacity duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/honoluluBalconyNight.mp4"
+                  src="/assets/images/thumbnails/honolulu/honoluluBalconyNight.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -331,7 +326,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/videos/Exterior+-+Rainy+Day.mp4"
+                  src="/assets/videos/Exterior+-+Rainy+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -356,7 +351,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Balcony+Rainy+Day.mp4"
+                  src="/assets/images/thumbnails/honolulu/Honolulu+Balcony+Rainy+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -379,7 +374,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/videos/Exterior+-+Rainy+Night.mp4"
+                  src="/assets/videos/Exterior+-+Rainy+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -404,7 +399,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Balcony+Rainy+Night.mp4"
+                  src="/assets/images/thumbnails/honolulu/Honolulu+Balcony+Rainy+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -425,7 +420,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/videos/Interior+-+Sunny+Day.mp4"
+                  src="/assets/videos/Interior+-+Sunny+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -446,7 +441,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Beach+Day.mp4"
+                  src="/assets/images/thumbnails/honolulu/Honolulu+Beach+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -470,7 +465,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/videos/Interior+-+Rainy+Day.mp4"
+                  src="/assets/videos/Interior+-+Rainy+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -495,7 +490,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Beach+Rainy+Day.mp4"
+                  src="/assets/images/thumbnails/honolulu/Honolulu+Beach+Rainy+Day.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -516,7 +511,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/videos/Interior+-+Night.mp4"
+                  src="/assets/videos/Interior+-+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -537,7 +532,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Beach+Night.mp4"
+                  src="/assets/images/thumbnails/honolulu/Honolulu+Beach+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -558,7 +553,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/videos/Interior+-+Rainy+Night.mp4"
+                  src="/assets/videos/Interior+-+Rainy+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -581,7 +576,7 @@ const Home = () => {
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Beach+Rainy+Night.mp4"
+                  src="/assets/images/thumbnails/honolulu/Honolulu+Beach+Rainy+Night.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -610,7 +605,7 @@ const Home = () => {
                   <ReactAudioPlayer
                     preload="auto"
                     autoPlay
-                    src="./assets/sounds/rain_city.mp3"
+                    src="/assets/sounds/rain_city.mp3"
                     loop
                     volume={volumeRainNum / 100}
                   />
@@ -621,7 +616,7 @@ const Home = () => {
                   <ReactAudioPlayer
                     preload="auto"
                     autoPlay
-                    src="./assets/sounds/summer_storm.mp3"
+                    src="/assets/sounds/summer_storm.mp3"
                     loop
                     volume={volumeSummerStorm / 100}
                   />
@@ -630,7 +625,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/city_traffic.mp3"
+                  src="/assets/sounds/city_traffic.mp3"
                   loop
                   volume={volumeCityTrafficNum / 100}
                 />
@@ -639,7 +634,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/keyboard.mp3"
+                  src="/assets/sounds/keyboard.mp3"
                   loop
                   volume={volumeKeyboardNum / 100}
                 />
@@ -648,7 +643,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/birds.mp3"
+                  src="/assets/sounds/birds.mp3"
                   loop
                   volume={volumeBird / 100}
                 />
@@ -657,7 +652,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/campfire.mp3"
+                  src="/assets/sounds/campfire.mp3"
                   loop
                   volume={volumeCampFire / 100}
                 />
@@ -666,7 +661,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/deepspace.mp3"
+                  src="/assets/sounds/deepspace.mp3"
                   loop
                   volume={volumeDeepSpace / 100}
                 />
@@ -675,7 +670,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/fireplace.mp3"
+                  src="/assets/sounds/fireplace.mp3"
                   loop
                   volume={volumeFirePlace / 100}
                 />
@@ -684,7 +679,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/forest_night.mp3"
+                  src="/assets/sounds/forest_night.mp3"
                   loop
                   volume={volumeForestNight / 100}
                 />
@@ -693,7 +688,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/ocean.mp3"
+                  src="/assets/sounds/ocean.mp3"
                   loop
                   volume={volumeOcean / 100}
                 />
@@ -702,7 +697,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/people_talk_inside.mp3"
+                  src="/assets/sounds/people_talk_inside.mp3"
                   loop
                   volume={volumePeopleTalk / 100}
                 />
@@ -711,7 +706,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/rain_forest.mp3"
+                  src="/assets/sounds/rain_forest.mp3"
                   loop
                   volume={volumeRainForest / 100}
                 />
@@ -720,7 +715,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/river.mp3"
+                  src="/assets/sounds/river.mp3"
                   loop
                   volume={volumeRiver / 100}
                 />
@@ -729,7 +724,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/snow.mp3"
+                  src="/assets/sounds/snow.mp3"
                   loop
                   volume={volumeSnow / 100}
                 />
@@ -738,7 +733,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/underwater.mp3"
+                  src="/assets/sounds/underwater.mp3"
                   loop
                   volume={volumeUnderWater / 100}
                 />
@@ -747,7 +742,7 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/waves.mp3"
+                  src="/assets/sounds/waves.mp3"
                   loop
                   volume={volumeWaves / 100}
                 />
@@ -756,14 +751,14 @@ const Home = () => {
                 <ReactAudioPlayer
                   preload="auto"
                   autoPlay
-                  src="./assets/sounds/wind.mp3"
+                  src="/assets/sounds/wind.mp3"
                   loop
                   volume={volumeWind / 100}
                 />
               )}
             </ButtonStatus>
 
-            {cafeScene && !enterStore && (
+            {cafeScene && (
               <ButtonStatus top="65%" left="28%">
                 <Radio
                   text="city traffic"

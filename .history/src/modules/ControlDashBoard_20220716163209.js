@@ -185,7 +185,7 @@ const ControlDashBoard = ({ openControlAdjust, controlBoardWidth }) => {
   useEffect(() => {
     if (volumeKeyboardNum > 0) {
       dispatch(toggleSlice.actions.keyboardDashBoardToggleHome(true));
-    } else if (volumeKeyboardNum === 0) {
+    } else if (volumeCityTrafficNum === 0) {
       dispatch(toggleSlice.actions.keyboardDashBoardToggleHome(false));
       dispatch(toggleSlice.actions.keyboardToggleHome(false));
     }

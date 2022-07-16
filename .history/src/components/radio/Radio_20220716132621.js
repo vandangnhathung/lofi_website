@@ -36,7 +36,7 @@ const Radio = ({
     (state) => state.toggle.keyboardDashBoard
   );
   const oceanDashBoard = useSelector(
-    (state) => state.toggle.oceanDashboardToggle
+    (state) => state.toggle.oceanDashBoardToggle
   );
   const volumeCityTrafficNum = useSelector(
     (state) => state.volume.volumeCityTraffic
@@ -90,11 +90,6 @@ const Radio = ({
   const handleChangeKeyboard = (e) => {
     handleChangeVolumeKeyboard(e.target.value);
   };
-  console.log(
-    "🚀 ~ file: Radio.js ~ line 140 ~ oceanDashBoard",
-    oceanDashBoard
-  );
-
   return (
     <label className="absolute cursor-pointer w-[200px] h-[72px] group flex justify-center">
       <input type="radio" className="hidden-input" checked={dayRain} />
@@ -105,7 +100,7 @@ const Radio = ({
         <span className="absolute block w-5 h-5 transition-all duration-200 -translate-x-1/2 -translate-y-1/2 rounded-full group-hover:bg-primary left-1/2 top-1/2"></span>
       </div>
       <div
-        className={`absolute top-[50%] hidden p-2  text-white capitalize rounded-lg group-hover:animate-scale group-hover:flex-col group-hover:flex group-active:block bg-blackBackground whitespace-nowrap hover:text-opacity-30 transition-all duration-200 text-center items-center justify-center`}
+        className={`absolute top-[50%] hidden p-2  text-white capitalize rounded-lg group-hover:animate-scale group-hover:flex-col group-hover:flex group-active:flex bg-blackBackground whitespace-nowrap hover:text-opacity-30 transition-all duration-200 text-center items-center justify-center`}
       >
         <p
           onClick={onClick}
@@ -119,7 +114,7 @@ const Radio = ({
           (text === "Summer storm" &&
             summerStormDashboard &&
             volumeSummerStorm > 0) ? (
-            <Box sx={{ width: 200 }}>
+            <Box sx={{ width: 150 }}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -142,7 +137,7 @@ const Radio = ({
           )}
           {(oceanSound && text === "Ocean") ||
           (text === "Ocean" && oceanDashBoard && volumeOcean > 0) ? (
-            <Box sx={{ width: 200 }}>
+            <Box sx={{ width: 150 }}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -165,7 +160,7 @@ const Radio = ({
           )}
           {(dayRain && text === "city rain") ||
           (text === "city rain" && dayRainDashboard && volumeRainNum > 0) ? (
-            <Box sx={{ width: 200 }}>
+            <Box sx={{ width: 150 }}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -192,7 +187,7 @@ const Radio = ({
           (cityTrafficDashBoard &&
             text === "city traffic" &&
             volumeCityTrafficNum > 0) ? (
-            <Box sx={{ width: 200 }}>
+            <Box sx={{ width: 150 }}>
               <Stack
                 spacing={2}
                 direction="row"
@@ -217,7 +212,7 @@ const Radio = ({
           (keyboardDashBoard &&
             text === "key board" &&
             volumeKeyboardNum > 0) ? (
-            <Box sx={{ width: 200 }}>
+            <Box sx={{ width: 150 }}>
               <Stack
                 spacing={2}
                 direction="row"
