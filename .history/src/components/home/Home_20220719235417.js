@@ -529,7 +529,7 @@ const Home = () => {
               honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
-            {honoluluSceneDay && volumeSummerStorm === 0 && (
+            {honoluluSceneDay && summerStormSound === 0 && (
               <video
                 autoPlay
                 loop

@@ -436,23 +436,22 @@ const Home = () => {
               honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
-            {honoluluSceneDay && (
-              <video
-                autoPlay
-                loop
-                muted
-                className={`${
-                  enterStore && !night && volumeSummerStorm === 0
-                    ? "opacity-100"
-                    : "opacity-0"
-                } absolute transition-opacity z-20 duration-1000`}
-              >
-                <source
-                  src="./assets/images/thumbnails/honolulu/Honolulu+Beach+Day.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            )}
+            {honoluluSceneDay &&
+              !night(
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className={`${
+                    enterStore ? "opacity-100" : "opacity-0"
+                  } absolute transition-opacity z-20 duration-1000`}
+                >
+                  <source
+                    src="./assets/images/thumbnails/honolulu/Honolulu+Beach+Day.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              )}
           </div>
           <div
             className={`${
@@ -483,7 +482,7 @@ const Home = () => {
               honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
-            {honoluluSceneDay && !night && (
+            {honoluluSceneDay && (
               <video
                 autoPlay
                 loop
@@ -529,7 +528,7 @@ const Home = () => {
               honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
-            {honoluluSceneDay && volumeSummerStorm === 0 && (
+            {honoluluSceneDay && (
               <video
                 autoPlay
                 loop

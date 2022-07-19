@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -55,5 +55,6 @@
   "devDependencies": {
     "tailwindcss": "^3.1.4"
   },
-  "homepage": "https://vandangnhathung.github.io/"
+  "homepage": "https://vandangnhathung.github.io/lofi_website"
+
 }
