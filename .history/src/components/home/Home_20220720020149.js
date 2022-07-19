@@ -219,7 +219,6 @@ const Home = () => {
   };
   return (
     <>
-      <div className="absolute inset-0 bg-[#bdbdbd] "></div>
       <div
         className={`transition-opacity duration-1000 ${
           honoluluSceneDay ? "opacity-0" : "opaicty-100"

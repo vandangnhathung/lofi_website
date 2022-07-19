@@ -219,12 +219,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className="absolute inset-0 bg-[#bdbdbd] "></div>
-      <div
-        className={`transition-opacity duration-1000 ${
-          honoluluSceneDay ? "opacity-0" : "opaicty-100"
-        } absolute inset-0 bg-[#24242f]  flex items-center justify-center`}
-      >
+      <div className="absolute inset-0 bg-[#24242f]  flex items-center justify-center">
         <img
           src="./assets/icons/logo.0cbf9e63b4a021661126.gif"
           className="h-[100px] w-[200px]"
@@ -265,11 +260,7 @@ const Home = () => {
                 autoPlay
                 loop
                 muted
-                className={`${
-                  night === false && enterStore === false
-                    ? "opacity-100 "
-                    : "opacity-0 "
-                }
+                className={`${night ? "opacity-0 " : "opacity-100 "}
                 absolute transition-opacity duration-1000`}
               >
                 <source
@@ -303,7 +294,7 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-70"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
             {honoluluSceneDay && (
@@ -312,7 +303,7 @@ const Home = () => {
                 loop
                 muted
                 className={`${
-                  night && enterStore === false ? "opacity-100" : "opacity-0"
+                  night ? "opacity-100" : "opacity-0"
                 } absolute transition-opacity duration-1000`}
               >
                 <source
@@ -347,7 +338,7 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-90"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
             {honoluluSceneDay && (
@@ -395,7 +386,7 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-90"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
             {honoluluSceneDay && (
@@ -441,7 +432,7 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-80"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
             {honoluluSceneDay && (
@@ -450,7 +441,7 @@ const Home = () => {
                 loop
                 muted
                 className={`${
-                  enterStore && night === false && volumeSummerStorm === 0
+                  enterStore && !night && volumeSummerStorm === 0
                     ? "opacity-100"
                     : "opacity-0"
                 } absolute transition-opacity z-20 duration-1000`}
@@ -488,10 +479,10 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-80"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
-            {honoluluSceneDay && (
+            {honoluluSceneDay && !night && (
               <video
                 autoPlay
                 loop
@@ -534,18 +525,16 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-80"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
-            {honoluluSceneDay && (
+            {honoluluSceneDay && volumeSummerStorm === 0 && (
               <video
                 autoPlay
                 loop
                 muted
                 className={`${
-                  enterStore && night && volumeSummerStorm === 0
-                    ? "opacity-100"
-                    : "opacity-0"
+                  enterStore && night ? "opacity-100" : "opacity-0"
                 } absolute transition-opacity z-20 duration-1000`}
               >
                 <source
@@ -578,7 +567,7 @@ const Home = () => {
           </div>
           <div
             className={`${
-              honoluluSceneDay ? "opacity-100" : "opacity-80"
+              honoluluSceneDay ? "opacity-100" : "opacity-0"
             } transition-opacity duration-1000`}
           >
             {honoluluSceneDay && (

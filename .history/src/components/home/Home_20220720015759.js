@@ -219,12 +219,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className="absolute inset-0 bg-[#bdbdbd] "></div>
-      <div
-        className={`transition-opacity duration-1000 ${
-          honoluluSceneDay ? "opacity-0" : "opaicty-100"
-        } absolute inset-0 bg-[#24242f]  flex items-center justify-center`}
-      >
+      <div className="absolute inset-0 bg-[#24242f]  flex items-center justify-center">
         <img
           src="./assets/icons/logo.0cbf9e63b4a021661126.gif"
           className="h-[100px] w-[200px]"
