@@ -11,6 +11,15 @@ const HeaderStyles = styled.header`
   padding: 0 50px;
 `;
 const Header = () => {
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
   return (
     <HeaderStyles>
       <nav className="flex items-center justify-between">
@@ -23,7 +32,7 @@ const Header = () => {
         <div className="flex items-center text-white gap-x-5">
           <Toggle></Toggle>
           <div className="premium">
-            <h3 className="py-1 px-3 flex items-center gap-x-2 bg-gradient-to-r rounded-lg from-[#f4ca5de6] to-[#e18654e6] ">
+            <h3 className="smp:hidden py-1 px-3 flex items-center gap-x-2 bg-gradient-to-r rounded-lg from-[#f4ca5de6] to-[#e18654e6] ">
               <h3 className="text-3xl">🚀</h3> Access +20 scenes <br /> & more
               with premium
             </h3>
@@ -32,7 +41,7 @@ const Header = () => {
             <span className="text-white">Sign up</span>
           </button>
           <ul className="flex items-center feature-header gap-x-3">
-            <li className="share-icon">
+            <li className="transition-all duration-500 share-icon hover:opacity-40">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"
@@ -48,10 +57,13 @@ const Header = () => {
                 />
               </svg>
             </li>
-            <li className="fullscreen-icon">
+            <li
+              className="transition-all duration-500 fullscreen-icon hover:opacity-40"
+              onClick={toggleFullScreen}
+            >
               <BiFullscreen className="w-[22px] h-[22px]" />{" "}
             </li>
-            <li className="menu-icon">
+            <li className="transition-all duration-500 menu-icon hover:opacity-40">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"

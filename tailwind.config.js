@@ -1,6 +1,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    screens: {
+      smp: { max: "670px" },
+    },
     extend: {
       colors: {
         primary: "#f3a952",
