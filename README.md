@@ -1,18 +1,18 @@
-Mục đích xây dựng website để người dùng có thể chọn lựa các thể loại nhạc phù hợp cùng với các âm thanh sống động giúp họ có thể cải thiện việc tập trung học hơn.
+The primary objective of developing this innovative website is to provide users with an immersive experience of selecting their preferred music genres, complemented by captivating sounds that significantly enhance their concentration and academic performance. By creating an enchanting atmosphere that combines the power of music and an engaging user interface, we aim to revolutionize the way individuals approach their studying and learning endeavors.
 
-### `npm install` - install lại các dependency để hỗ trợ website
+To build the website, follow these steps:
 
-### `npm start` - build project trên localhost:3000
+Open the terminal in the project directory.
 
-## Website Deployment
+Run npm install to install the necessary dependencies for the website.
 
-### https://vanhung-lofi.netlify.app/
+Run npm start to build the project on localhost:3000.
 
+Website Deployment: https://vanhung-lofi.netlify.app/
 
-
-## Màn hình chính của website
+Main Screen of the Website
 ![image](https://github.com/vandangnhathung/lofi_website/assets/77733880/ffb04a91-a819-4261-a0fd-4f5778a7cdda)
-## Màn hình show dashboard cho người dùng thực hiện các thao tác chỉnh âm thanh, chọn loại âm thanh
+Dashboard Screen for Users to Adjust Sound and Select Sound Types
 ![image](https://github.com/vandangnhathung/lofi_website/assets/77733880/020ddc25-383d-4ce1-b29f-82e93b57ed93)
-## Màn hình khác
+Other Screens 
 ![image](https://github.com/vandangnhathung/lofi_website/assets/77733880/a5cde7b0-954e-49c0-a60d-58ed581cafab)
